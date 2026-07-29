@@ -1,4 +1,6 @@
 <?php
+
+// Custom Post Type
 function team_post_type() {
     register_post_type('team', array(
         'labels' => array(
@@ -12,7 +14,8 @@ function team_post_type() {
         'menu_icon' => 'dashicons-groups',
         'menu_position' => 20,
 		'has_archieve' => true,
-        'publicly_queryable' => false,
+		'publicly_queryable' => false,
+		'show_in_rest' => true,
         'rewrite' => array(
             'slug' => 'our-team'
         ),
