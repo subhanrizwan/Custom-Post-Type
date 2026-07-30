@@ -23,8 +23,7 @@ function team_post_type()
         'supports' => array('title', 'editor', 'thumbnail'),
         'taxonomies' => array('category', 'post_tag')
     ));
-}
- 
+} 
 add_action('init', 'team_post_type');
 
 function create_team_taxonomy(){
