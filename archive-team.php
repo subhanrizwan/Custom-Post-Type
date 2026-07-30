@@ -1,31 +1,31 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 
 <div class="team-archive">
 
-<h1>All Teams</h1>
+<h1>Team Members</h1>
 
 <div class="team-grid">
     
     <?php
 	
-    if(has_posts_thumbnail()):
+    if(have_posts()):
         while(have_posts()):
 	    the_post();
     ?>
 	
        <div class="team-card">
 		   
-		   <?php if(has_posts_thumbnail()) : ?>
+		   <?php if(has_post_thumbnail()) : ?>
 		   
 		   <div class="team-member-image">
-			   <?php the_posts_thumbnail() ?>
+			   <?php the_post_thumbnail() ?>
 		   </div>
 		  
-	<?php endif ?>
+	<?php endif; ?>
 	
-	<a href="the_permalink()">
+	<a href="<?php the_permalink() ?>">
 	<h3>
-		<?php the_title() ?>
+		<?php the_title(); ?>
 	</h3>
 	</a>		
 	
@@ -37,7 +37,9 @@
 	
 	<?php endwhile;
 
-	endif ?>
+           endif; ?>
+
+</div>
 
 </div>
 
